@@ -10,7 +10,7 @@ package vista;
  * @author zulur
  */
 public interface ICambiaVentana {
-    
-    void cambiarPantalla();
-    
+
+    void cambiarVentana();
+
 }

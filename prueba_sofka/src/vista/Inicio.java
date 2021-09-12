@@ -5,17 +5,25 @@
  */
 package vista;
 
+import controlador.JugadorJpaController;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import modelo.Jugador;
+
 /**
  *
  * @author zulur
  */
-public class Inicio extends javax.swing.JFrame implements ICambiaVentana{
+public class Inicio extends javax.swing.JFrame implements ICambiaVentana {
 
-    /**
-     * Creates new form Inicio
-     */
+    JugadorJpaController controlador = new JugadorJpaController();
+    Jugador jugador = new Jugador();
+
     public Inicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        llenarTabla();
     }
 
     /**
@@ -29,56 +37,85 @@ public class Inicio extends javax.swing.JFrame implements ICambiaVentana{
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        tb_I_historico = new javax.swing.JTable();
+        btn_I_nuevoJuego = new javax.swing.JButton();
+        btn_I_salir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tb_I_historico.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tb_I_historico);
 
-        jButton1.setText("NUEVO JUEGO");
+        btn_I_nuevoJuego.setText("NUEVO JUEGO");
+        btn_I_nuevoJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_I_nuevoJuegoActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("SALIR");
+        btn_I_salir.setText("SALIR");
+        btn_I_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_I_salirActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("BIENVENIDO AL RETO DE PREGUNTAS");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("HISTORICO");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(34, 34, 34)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_I_nuevoJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_I_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(124, 124, 124))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(142, 142, 142)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(btn_I_nuevoJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(btn_I_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -94,6 +131,15 @@ public class Inicio extends javax.swing.JFrame implements ICambiaVentana{
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_I_nuevoJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_I_nuevoJuegoActionPerformed
+        cambiarVentana();
+    }//GEN-LAST:event_btn_I_nuevoJuegoActionPerformed
+
+    private void btn_I_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_I_salirActionPerformed
+        JOptionPane.showMessageDialog(null,"Hasta luego, vuelve pronto.");
+        this.dispose();
+    }//GEN-LAST:event_btn_I_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,16 +177,41 @@ public class Inicio extends javax.swing.JFrame implements ICambiaVentana{
     }
 
     @Override
-    public void cambiarPantalla() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void cambiarVentana() {
+        MenuPrincipal menuPrincipal = new MenuPrincipal();
+        menuPrincipal.setVisible(true);
+        this.dispose();
     }
-    
+
+    private void llenarTabla() {
+        String Columnas[] = {"JUGADOR", "TIPO DE PREMIO", "ACUMULADO", "RONDA"};
+        DefaultTableModel TablaModelo = new DefaultTableModel(Columnas, 0);
+        Object[] objetos = new Object[4];
+        List lista;
+        try {
+            lista = controlador.findJugadorEntities();
+            for (int i = 0; i < lista.size(); i++) {
+                jugador = (Jugador) lista.get(i);
+                objetos[0] = jugador.getNombre();
+                objetos[1] = jugador.getPremio().getTipoPremio();
+                objetos[2] = jugador.getAcomulado();
+                objetos[3] = jugador.getRonda().getNivel();
+                TablaModelo.addRow(objetos);
+            }
+            this.tb_I_historico.setModel(TablaModelo);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error al cargar datos de la tabla.");
+        }
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btn_I_nuevoJuego;
+    private javax.swing.JButton btn_I_salir;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tb_I_historico;
     // End of variables declaration//GEN-END:variables
 
 }

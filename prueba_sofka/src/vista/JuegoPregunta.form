@@ -2,7 +2,7 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="BtnG_R_grupoBotones">
+    <Component class="javax.swing.ButtonGroup" name="rbg_JP_grupoBotones">
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -32,7 +32,10 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -51,43 +54,29 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
-                          <Component id="txt_R_roda" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_JP_roda" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txt_R_pregunta" min="-2" pref="498" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                          <Component id="btn_JP_retirar" min="-2" pref="127" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <Component id="btn_JP_siguiente" min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Rbtn_R_opcion1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Rbtn_R_opcion2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Rbtn_R_opcion3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Rbtn_R_opcion4" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txt_R_categoria" max="32767" attributes="0"/>
-                              <Component id="txt_R_acumulado" pref="461" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Rbtn_JP_opcion1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Rbtn_JP_opcion2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Rbtn_JP_opcion3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Rbtn_JP_opcion4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_JP_pregunta" alignment="0" min="-2" pref="476" max="-2" attributes="0"/>
+                              <Component id="txt_JP_categoria" alignment="0" min="-2" pref="461" max="-2" attributes="0"/>
+                              <Component id="txt_JP_acumulado" alignment="0" min="-2" pref="461" max="-2" attributes="0"/>
+                              <Component id="txt_JP_premio" alignment="0" min="-2" pref="461" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                          <Component id="Btn_R_retirar" min="-2" pref="127" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
-                          <Component id="Btn_R_siguiente" min="-2" pref="127" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace pref="32" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,25 +84,27 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Component id="txt_R_roda" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  <Component id="txt_R_acumulado" min="-2" pref="15" max="-2" attributes="0"/>
+                  <Component id="txt_JP_roda" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <Component id="txt_JP_premio" min="-2" pref="15" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="txt_R_categoria" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="txt_R_pregunta" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                  <Component id="Rbtn_R_opcion1" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_JP_acumulado" min="-2" pref="15" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Rbtn_R_opcion2" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_JP_categoria" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Component id="txt_JP_pregunta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="Rbtn_JP_opcion1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Rbtn_R_opcion3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Rbtn_JP_opcion2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Rbtn_R_opcion4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                  <Component id="Rbtn_JP_opcion3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="Rbtn_JP_opcion4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Btn_R_retirar" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="Btn_R_siguiente" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="btn_JP_retirar" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="btn_JP_siguiente" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
@@ -121,7 +112,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="txt_R_roda">
+        <Component class="javax.swing.JLabel" name="txt_JP_roda">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -129,7 +120,7 @@
             <Property name="text" type="java.lang.String" value="RONDA 1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="txt_R_acumulado">
+        <Component class="javax.swing.JLabel" name="txt_JP_acumulado">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="0"/>
@@ -137,7 +128,7 @@
             <Property name="text" type="java.lang.String" value="ACUMULADO"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="txt_R_pregunta">
+        <Component class="javax.swing.JLabel" name="txt_JP_pregunta">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
@@ -146,32 +137,35 @@
             <Property name="text" type="java.lang.String" value="&#xbf;Cu&#xe1;l es la naci&#xf3;n m&#xe1;s peque&#xf1;a del mundo?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rbtn_R_opcion1">
+        <Component class="javax.swing.JRadioButton" name="Rbtn_JP_opcion1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Andorra"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rbtn_R_opcion2">
+        <Component class="javax.swing.JRadioButton" name="Rbtn_JP_opcion2">
           <Properties>
             <Property name="text" type="java.lang.String" value="M&#xf3;naco"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rbtn_R_opcion3">
+        <Component class="javax.swing.JRadioButton" name="Rbtn_JP_opcion3">
           <Properties>
             <Property name="text" type="java.lang.String" value="El Vaticano"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rbtn_R_opcion4">
+        <Component class="javax.swing.JRadioButton" name="Rbtn_JP_opcion4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Alaska"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Btn_R_retirar">
+        <Component class="javax.swing.JButton" name="btn_JP_retirar">
           <Properties>
             <Property name="text" type="java.lang.String" value="RETIRARSE"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_JP_retirarActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="txt_R_categoria">
+        <Component class="javax.swing.JLabel" name="txt_JP_categoria">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="0"/>
@@ -179,13 +173,21 @@
             <Property name="text" type="java.lang.String" value="CATEGORIA"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Btn_R_siguiente">
+        <Component class="javax.swing.JButton" name="btn_JP_siguiente">
           <Properties>
             <Property name="text" type="java.lang.String" value="SIGUIENTE"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_R_siguienteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_JP_siguienteActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="txt_JP_premio">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="PREMIO A CONSEGUIR"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
