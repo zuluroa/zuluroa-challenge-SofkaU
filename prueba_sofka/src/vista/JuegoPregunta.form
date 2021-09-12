@@ -65,10 +65,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="Rbtn_JP_opcion1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Rbtn_JP_opcion2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Rbtn_JP_opcion3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Rbtn_JP_opcion4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rbtn_JP_opcion1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rbtn_JP_opcion2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rbtn_JP_opcion3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rbtn_JP_opcion4" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_JP_pregunta" alignment="0" min="-2" pref="476" max="-2" attributes="0"/>
                               <Component id="txt_JP_categoria" alignment="0" min="-2" pref="461" max="-2" attributes="0"/>
                               <Component id="txt_JP_acumulado" alignment="0" min="-2" pref="461" max="-2" attributes="0"/>
@@ -94,13 +94,13 @@
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="txt_JP_pregunta" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="Rbtn_JP_opcion1" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtn_JP_opcion1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Rbtn_JP_opcion2" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtn_JP_opcion2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Rbtn_JP_opcion3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtn_JP_opcion3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="Rbtn_JP_opcion4" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbtn_JP_opcion4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btn_JP_retirar" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
@@ -137,22 +137,22 @@
             <Property name="text" type="java.lang.String" value="&#xbf;Cu&#xe1;l es la naci&#xf3;n m&#xe1;s peque&#xf1;a del mundo?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rbtn_JP_opcion1">
+        <Component class="javax.swing.JRadioButton" name="rbtn_JP_opcion1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Andorra"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rbtn_JP_opcion2">
+        <Component class="javax.swing.JRadioButton" name="rbtn_JP_opcion2">
           <Properties>
             <Property name="text" type="java.lang.String" value="M&#xf3;naco"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rbtn_JP_opcion3">
+        <Component class="javax.swing.JRadioButton" name="rbtn_JP_opcion3">
           <Properties>
             <Property name="text" type="java.lang.String" value="El Vaticano"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="Rbtn_JP_opcion4">
+        <Component class="javax.swing.JRadioButton" name="rbtn_JP_opcion4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Alaska"/>
           </Properties>

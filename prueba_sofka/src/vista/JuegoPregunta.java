@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
 import controlador.JugadorJpaController;
@@ -28,7 +23,7 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
     private Categoria categoria = new Categoria();
     private Jugador jugador = new Jugador();
     private Premio premio = new Premio();
-    private String RespuestaCorrecta = "", nombreJugador = "", TipoPremio = "";
+    private String respuestaCorrecta = "", nombreJugador = "", tipoPremio = "";
     private int acumulado = 0, nivel = 0, i = 0;
     private final RondaJpaController controladorRonda = new RondaJpaController();
     private final JugadorJpaController controladorJugador = new JugadorJpaController();
@@ -43,7 +38,7 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
         this.setLocationRelativeTo(null);
 
         this.nombreJugador = nombreJugador;
-        this.TipoPremio = TipoPremio;
+        this.tipoPremio = TipoPremio;
 
         nivel = 1;
 
@@ -60,10 +55,10 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
         txt_JP_roda = new javax.swing.JLabel();
         txt_JP_acumulado = new javax.swing.JLabel();
         txt_JP_pregunta = new javax.swing.JLabel();
-        Rbtn_JP_opcion1 = new javax.swing.JRadioButton();
-        Rbtn_JP_opcion2 = new javax.swing.JRadioButton();
-        Rbtn_JP_opcion3 = new javax.swing.JRadioButton();
-        Rbtn_JP_opcion4 = new javax.swing.JRadioButton();
+        rbtn_JP_opcion1 = new javax.swing.JRadioButton();
+        rbtn_JP_opcion2 = new javax.swing.JRadioButton();
+        rbtn_JP_opcion3 = new javax.swing.JRadioButton();
+        rbtn_JP_opcion4 = new javax.swing.JRadioButton();
         btn_JP_retirar = new javax.swing.JButton();
         txt_JP_categoria = new javax.swing.JLabel();
         btn_JP_siguiente = new javax.swing.JButton();
@@ -83,13 +78,13 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
         txt_JP_pregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_JP_pregunta.setText("¿Cuál es la nación más pequeña del mundo?");
 
-        Rbtn_JP_opcion1.setText("Andorra");
+        rbtn_JP_opcion1.setText("Andorra");
 
-        Rbtn_JP_opcion2.setText("Mónaco");
+        rbtn_JP_opcion2.setText("Mónaco");
 
-        Rbtn_JP_opcion3.setText("El Vaticano");
+        rbtn_JP_opcion3.setText("El Vaticano");
 
-        Rbtn_JP_opcion4.setText("Alaska");
+        rbtn_JP_opcion4.setText("Alaska");
 
         btn_JP_retirar.setText("RETIRARSE");
         btn_JP_retirar.addActionListener(new java.awt.event.ActionListener() {
@@ -128,10 +123,10 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Rbtn_JP_opcion1)
-                            .addComponent(Rbtn_JP_opcion2)
-                            .addComponent(Rbtn_JP_opcion3)
-                            .addComponent(Rbtn_JP_opcion4)
+                            .addComponent(rbtn_JP_opcion1)
+                            .addComponent(rbtn_JP_opcion2)
+                            .addComponent(rbtn_JP_opcion3)
+                            .addComponent(rbtn_JP_opcion4)
                             .addComponent(txt_JP_pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_JP_categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_JP_acumulado, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -152,13 +147,13 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
                 .addGap(36, 36, 36)
                 .addComponent(txt_JP_pregunta)
                 .addGap(38, 38, 38)
-                .addComponent(Rbtn_JP_opcion1)
+                .addComponent(rbtn_JP_opcion1)
                 .addGap(18, 18, 18)
-                .addComponent(Rbtn_JP_opcion2)
+                .addComponent(rbtn_JP_opcion2)
                 .addGap(18, 18, 18)
-                .addComponent(Rbtn_JP_opcion3)
+                .addComponent(rbtn_JP_opcion3)
                 .addGap(18, 18, 18)
-                .addComponent(Rbtn_JP_opcion4)
+                .addComponent(rbtn_JP_opcion4)
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_JP_retirar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -192,35 +187,9 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
         guardarDatos();
     }//GEN-LAST:event_btn_JP_retirarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JuegoPregunta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JuegoPregunta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JuegoPregunta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JuegoPregunta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JuegoPregunta().setVisible(true);
@@ -237,12 +206,12 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
 
     private void Iniciar() {
 
-        txt_JP_premio.setText(TipoPremio + " A CONSEGUIR: 100");
+        txt_JP_premio.setText(tipoPremio + " A CONSEGUIR: 100");
 
-        rbg_JP_grupoBotones.add(Rbtn_JP_opcion1);
-        rbg_JP_grupoBotones.add(Rbtn_JP_opcion2);
-        rbg_JP_grupoBotones.add(Rbtn_JP_opcion3);
-        rbg_JP_grupoBotones.add(Rbtn_JP_opcion4);
+        rbg_JP_grupoBotones.add(rbtn_JP_opcion1);
+        rbg_JP_grupoBotones.add(rbtn_JP_opcion2);
+        rbg_JP_grupoBotones.add(rbtn_JP_opcion3);
+        rbg_JP_grupoBotones.add(rbtn_JP_opcion4);
     }
 
     private void comenzarJuego() {
@@ -268,16 +237,16 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
                             for (i = 0; i < listaOpciones.size(); i++) {
                                 opcion = listaOpciones.get(i);
                                 if (i == 0) {
-                                    Rbtn_JP_opcion1.setText(opcion.getRespuesta());
+                                    rbtn_JP_opcion1.setText(opcion.getRespuesta());
                                 } else if (i == 1) {
-                                    Rbtn_JP_opcion2.setText(opcion.getRespuesta());
+                                    rbtn_JP_opcion2.setText(opcion.getRespuesta());
                                 } else if (i == 2) {
-                                    Rbtn_JP_opcion3.setText(opcion.getRespuesta());
+                                    rbtn_JP_opcion3.setText(opcion.getRespuesta());
                                 } else if (i == 3) {
-                                    Rbtn_JP_opcion4.setText(opcion.getRespuesta());
+                                    rbtn_JP_opcion4.setText(opcion.getRespuesta());
                                 }
                                 if (opcion.getEstado() == 0) {
-                                    RespuestaCorrecta = opcion.getRespuesta();
+                                    respuestaCorrecta = opcion.getRespuesta();
                                 }
                             }
                         }
@@ -289,26 +258,26 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
     }
 
     private void comprobarRespuesta() {
-        if (Rbtn_JP_opcion1.isSelected()) {
-            if (Rbtn_JP_opcion1.getText().equals(RespuestaCorrecta)) {
+        if (rbtn_JP_opcion1.isSelected()) {
+            if (rbtn_JP_opcion1.getText().equals(respuestaCorrecta)) {
                 siguienteNivel();
             } else {
                 respuestaIncorrecta();
             }
-        } else if (Rbtn_JP_opcion2.isSelected()) {
-            if (Rbtn_JP_opcion2.getText().equals(RespuestaCorrecta)) {
+        } else if (rbtn_JP_opcion2.isSelected()) {
+            if (rbtn_JP_opcion2.getText().equals(respuestaCorrecta)) {
                 siguienteNivel();
             } else {
                 respuestaIncorrecta();
             }
-        } else if (Rbtn_JP_opcion3.isSelected()) {
-            if (Rbtn_JP_opcion3.getText().equals(RespuestaCorrecta)) {
+        } else if (rbtn_JP_opcion3.isSelected()) {
+            if (rbtn_JP_opcion3.getText().equals(respuestaCorrecta)) {
                 siguienteNivel();
             } else {
                 respuestaIncorrecta();
             }
-        } else if (Rbtn_JP_opcion4.isSelected()) {
-            if (Rbtn_JP_opcion4.getText().equals(RespuestaCorrecta)) {
+        } else if (rbtn_JP_opcion4.isSelected()) {
+            if (rbtn_JP_opcion4.getText().equals(respuestaCorrecta)) {
                 siguienteNivel();
             } else {
                 respuestaIncorrecta();
@@ -326,6 +295,7 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
         acumulado += 100;
         nivel++;
         if(nivel > 5){
+            nivel --;
             finJuego();
         }else{
             comenzarJuego();
@@ -338,7 +308,7 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
     }
 
     private void guardarDatos() {
-        Query RsPremio = em.createQuery("SELECT p FROM Premio p WHERE p.tipoPremio = :tipoPremio").setParameter("tipoPremio", TipoPremio);
+        Query RsPremio = em.createQuery("SELECT p FROM Premio p WHERE p.tipoPremio = :tipoPremio").setParameter("tipoPremio", tipoPremio);
         List<Premio> listaPremios = (List<Premio>) RsPremio.getResultList();
         int idPremio = 0;
         for (Premio premio : listaPremios) {
@@ -360,14 +330,14 @@ public class JuegoPregunta extends javax.swing.JFrame implements ICambiaVentana 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Rbtn_JP_opcion1;
-    private javax.swing.JRadioButton Rbtn_JP_opcion2;
-    private javax.swing.JRadioButton Rbtn_JP_opcion3;
-    private javax.swing.JRadioButton Rbtn_JP_opcion4;
     private javax.swing.JButton btn_JP_retirar;
     private javax.swing.JButton btn_JP_siguiente;
     private javax.swing.JPanel jPanel1;
     private javax.swing.ButtonGroup rbg_JP_grupoBotones;
+    private javax.swing.JRadioButton rbtn_JP_opcion1;
+    private javax.swing.JRadioButton rbtn_JP_opcion2;
+    private javax.swing.JRadioButton rbtn_JP_opcion3;
+    private javax.swing.JRadioButton rbtn_JP_opcion4;
     private javax.swing.JLabel txt_JP_acumulado;
     private javax.swing.JLabel txt_JP_categoria;
     private javax.swing.JLabel txt_JP_pregunta;
